@@ -1,0 +1,324 @@
+
+html {
+    background: -webkit-linear-gradient(40deg,rgb(69, 202, 252),rgb(48, 63, 159));
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+
+}
+    
+body {
+    background: transparent !important; 
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+} 
+    /*     background: linear-gradient(40deg,#ffd86f,#fc6262)*/
+
+#game-name {
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    font-size: 75px;
+    color: rgba(108, 117, 125, 1);
+}
+
+#back-button {
+    color: rgba(66, 134, 244, 0.75);
+    background-color: transparent;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    display: inline-block;
+    padding: 0;
+    margin: 10px;
+    overflow: hidden;
+    vertical-align: text-top;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(66, 134, 244, 0.75) ;
+    outline: none;
+    box-sizing: unset;
+    margin-left: auto;
+    margin-top: -37.5px;
+    
+}
+
+#noughts, #titleO {
+    color: rgba(252, 98, 98, 1);
+}
+
+#crosses {
+    color: rgba(66, 134, 244, 1)
+}
+
+#noughts, #crosses {
+    font-family: 'Monoton', cursive;
+    display: inline-flex;
+      
+}
+
+
+
+#main-board {
+    width: 85vw;
+    margin: 7.5vh auto 7.5vh auto;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0px;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+#main-board:before {
+    width: 80vw;
+    height: 85vh;
+    margin: 7.5vh 7.55vh;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 0 30px rgba(0,0,0,.1), 1px 1px 3px rgba(0,0,0,.2);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(-2.5deg);
+    z-index: -1;
+}
+
+#start-board {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+}
+
+#game-board {
+    width: 90%;
+    flex: none;
+}
+
+#player-mode {
+    top: 0;
+    width: 44px;
+    height: 28px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    padding: 13px 6px;
+    transition: all .3s ease;
+    box-sizing: unset;
+    
+    
+}
+
+#score-board {
+    text-align: center;
+    padding: 10px;
+    font-family: 'Monoton', cursive;
+    font-size: 20px;
+    
+}
+
+#player-one-div {
+    color: rgba(66, 134, 244, 1); 
+    border: 1px solid rgba(204, 204, 204, 0.514);
+}
+
+#player-one-score {
+      
+}
+
+#tie-div {
+    color: rgba(108, 117, 125, 0.5);
+    border: 1px solid rgba(204, 204, 204, 0.514);
+}
+
+#tie-count {
+
+}
+
+#other-player-div {
+    color: rgba(252, 98, 98, 1);
+    border: 1px solid rgba(204, 204, 204, 0.514);
+
+}
+
+#other-player-score {
+
+}
+
+.not-selected {
+    opacity: 0.5;
+}
+
+#players {
+    font-family: 'Monoton', cursive;
+    font-size: 25px;
+    color:rgba(108, 117, 125, 1);
+    padding-top: 20px;
+
+}
+
+#vs {
+    font-family: 'Monoton', cursive;
+    font-size: 15px;
+    color:rgba(108, 117, 125, 1);
+    margin: 0px;
+    padding: 0px;
+}
+
+#mode-change {
+    display: block;
+}
+
+
+#level-select {
+    font-family: 'Monoton', cursive;
+    width: 375px;
+    position: absolute;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    margin: 2px auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    transition: all .3s ease;
+
+}
+
+#level-select > label  {
+    width:140px;
+    padding: 10px 5px;
+    max-height: 39px;
+
+}
+
+#player-one, #player-two {
+    font-size: 40px;
+    display: inline-flex; 
+}
+
+#player-two {
+    margin: 0px;
+    position: relative;
+    z-index: 0;
+    
+}
+
+#player-one > label, #player-two > label {
+    font-size: 15px;
+    font-weight: 700;
+    left: 44px; 
+    margin: 0px;
+    padding: 0px;
+}
+
+#player-two > label > .active {
+    box-shadow: none !important;
+
+}
+
+#player-one > input{
+    border-bottom:  2px solid rgba(66, 134, 244, 1);
+    box-shadow: none;
+     
+}
+
+#player-two > input{
+    border-bottom:  2px solid rgba(252, 98, 98, 1);
+    box-shadow: none;
+     
+}
+
+
+#playerOneText, #playerTwoText {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+#player-two > .active {
+    color: rgba(252, 98, 98, 1) !important;
+}
+
+
+#play {
+    color: rgba(66, 134, 244, 1);
+    font-size: 60px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    
+   
+}
+
+.game-square {
+    padding: 15px;
+    height: 15vh;
+    width: 15vh;
+}
+
+.game-square:nth-child(1),
+.game-square:nth-child(2) {
+    border-right: 10px solid rgba(108, 117, 125, 0.75);
+}
+
+.top > .game-square:nth-child(1), 
+.top > .game-square:nth-child(2),
+.top > .game-square:nth-child(3) {
+    border-bottom: 10px solid rgba(108, 117, 125, 0.5);
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+
+
+/*-------------------------------------------------------------*/
+/*-------------------------MEDIA QUERIES-----------------------*/
+/*-------------------------------------------------------------*/
+
+@media screen and (max-width: 770px) {
+    #game-name {
+        font-size: 60px;
+    }
+
+}
+
+@media screen and (max-width: 495px) {
+    .game-square {
+        height: 13vh;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    #back-button {
+        position: fixed;
+        margin-top: -50px;
+    }
+
+}

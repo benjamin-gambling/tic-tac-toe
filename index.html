@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TIC TAC TOE</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="css/tic-tac-toe.png" sizes="16x16" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" >
+        <!-- Bootstrap Core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"> 
+    </head>
+    <body>
+        <div id="main-board" class="container jumbotron">
+            <button id="back-button" class="waves-effect hidden"><i class="fas fa-arrow-left"></i></button>
+            <div><h1 id="game-name">TIC &nbsp; TAC &nbsp; T<span id="titleO" class="animated flash slower infinite">O</span>E</h1></div>
+            
+            <div id="start-board">
+                <form id="game-form">
+                    <legend id="players">PLAYERS</legend>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label id="player-mode" class="btn btn-primary">
+                            <input type="radio" name="player-mode" id="one-player" autocomplete="off" checked><i class="fas fa-user"></i>
+                        </label>
+                        <label id="player-mode" class="btn btn-primary not-selected">
+                            <input type="radio" name="player-mode"  id="two-player" ><i class="fas fa-user-friends"></i>
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+                    <div id="player-one" class="md-form">
+                        <i id="crosses" class="prefix">X&nbsp;</i>
+                        <input type="text" id="playerOneText" class="form-control" autocomplete="off">
+                        <label for="playerOneText">PLAYER ONE</label>
+                    </div>
+                    <p id="vs">VS.</p>
+                    <br>
+                    <div id="mode-change" class="row">
+                        <div id="level-select" class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label id="level" class="btn btn-primary not-selected">
+                                <input type="radio" name="level" id="easy" >EASY
+                            </label>
+                            <label id="level" class="btn btn-primary">
+                                <input type="radio" name="level"  id="normal" checked>NORMAL
+                            </label>
+                            <label id="level" class="btn btn-primary not-selected">
+                                <input type="radio" name="level"  id="impossible">IMPOSSIBLE
+                            </label>
+                        </div>
+                        <div id="player-two" class="md-form animated hidden">
+                            <i id="noughts" class="prefix">O&nbsp;</i>
+                            <input type="text" id="playerTwoText" class="form-control" autocomplete="off">
+                            <label for="playerTwoText">PLAYER TWO</label>
+                        </div>
+                    </div>
+                    <br>
+                    <button id="play" type="submit" class="waves-effect"><i class="far fa-play-circle"></i></button>
+                </form>    
+            </div>
+            <div id="game-board" class="container d-none">
+                <div id="score-board" class="row justify-content-center">
+                    <div class="col">
+                        <div id="player-one-div">
+                            <div id="player-one-name">PLAYER &nbsp; 1</div>
+                            <div id="player-one-score">0</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div id="tie-div">
+                            <div>TIES</div>
+                            <div id="tie-count">0</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div id="other-player-div">
+                            <div id="other-player-name">PLAYER &nbsp; 2</div>
+                            <div id="other-player-score">0</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-center top">
+                    <div data-position="0" class="col col-md-2 col-lg-2 col-xl-2 game-square"></div>
+                    <div data-position="1" class="col col-md-2 col-lg-2 col-xl-2 game-square"></div>
+                    <div data-position="2" class="col col-md-2 col-lg-2 col-xl-2 game-square"></div>
+                </div>
+                <div class="row justify-content-center top">
+                    <div data-position="3" class="col col-md-2 col-lg-2 col-xl-2 game-square"></div>
+                    <div data-position="4" class="col col-md-2 col-lg-2 col-xl-2 game-square"></div>
+                    <div data-position="5" class="col col-md-2 col-lg-2 col-xl-2 game-square"></div>
+                </div>
+                <div class="row justify-content-center">
+                    <div data-position="6" class="col col-md-2 col-lg-2 col-xl-2 game-square"></div>
+                    <div data-position="7" class="col col-md-2 col-lg-2 col-xl-2 game-square"></div>
+                    <div data-position="8" class="col col-md-2 col-lg-2 col-xl-2 game-square"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+        <!-- Custom JavaScript -->
+        <script  type="text/javascript" src="js/script.js"></script>
+    </body>
+</html> 
