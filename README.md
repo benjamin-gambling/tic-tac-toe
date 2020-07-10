@@ -15,7 +15,7 @@ This is a complete and fully functional WebApp game and optimized for certain mo
 **_Artificial Intelligence_**
 There are three differnt levels to choose from, that through AI create a differnt level of difficulty. 
 
-**EASY:** This level randomly selects and empty space
+**EASY:** This level randomly selects an empty space to place the move.
 
 **NORMAL**: This level thinks just about the current move, it loops through the possible win lines and evaluates the "X" & "O" if the AI can win it will, if the human can win it will block, otherwise it will contiue to place on a line in which it current already has made a move. 
 
