@@ -5,6 +5,7 @@ html {
     background-size: cover;
     top: 0;
     bottom: 0;
+    height: 100%
 
 }
     
@@ -13,15 +14,15 @@ body {
     align-items: center;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100%
     
 } 
-    /*     background: linear-gradient(40deg,#ffd86f,#fc6262)*/
 
 #game-name {
     font-family: 'Monoton', cursive;
     text-align: center;
-    font-size: 75px;
+    font-size: 65px;
+    line-height: 80px;;
     color: rgba(108, 117, 125, 1);
 }
 
@@ -64,10 +65,9 @@ body {
 #noughts, #crosses {
     font-family: 'Monoton', cursive;
     display: inline-flex;
+    
       
 }
-
-
 
 #main-board {
     width: 85vw;
@@ -128,7 +128,7 @@ body {
 
 #score-board {
     text-align: center;
-    padding: 10px;
+    padding: 10px 0px 10px 0px !important;
     font-family: 'Monoton', cursive;
     font-size: 20px;
     
@@ -137,34 +137,49 @@ body {
 #player-one-div {
     color: rgba(66, 134, 244, 1); 
     border: 1px solid rgba(204, 204, 204, 0.514);
-}
-
-#player-one-score {
-      
+    padding: 1px !important;
 }
 
 #tie-div {
     color: rgba(108, 117, 125, 0.5);
     border: 1px solid rgba(204, 204, 204, 0.514);
-}
-
-#tie-count {
-
+    padding: 1px !important;
 }
 
 #other-player-div {
     color: rgba(252, 98, 98, 1);
     border: 1px solid rgba(204, 204, 204, 0.514);
+    padding: 1px !important;
 
 }
 
-#other-player-score {
+.noughts-end  {
+    color: rgba(252, 98, 98, 0.2) !important;
+    font-size: 50px;
+    
+}
 
+.crosses-end {
+    color: rgba(66, 134, 244, 0.2) !important;
+    font-size: 50px;
 }
 
 .not-selected {
     opacity: 0.5;
 }
+
+.noughts-win  {
+    color: rgba(252, 98, 98, 1) !important;
+    font-size: 50px !important;
+    text-align: center !important; 
+}
+
+.crosses-win  {
+    color: rgba(66, 134, 244, 1) !important;
+    font-size: 50px !important;
+    text-align: center !important;  
+}
+
 
 #players {
     font-family: 'Monoton', cursive;
@@ -257,6 +272,19 @@ body {
     color: rgba(252, 98, 98, 1) !important;
 }
 
+#rematch { 
+    z-index: 1;
+    color: rgba(66, 134, 244, 1);
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    font-family: 'Monoton', cursive;
+    font-size: 25px !important;
+    padding: none;
+    position: absolute;
+    bottom: -20px;
+    border: 5px solid rgba(66, 134, 244, 1);
+    outline: none;
+
+}
 
 #play {
     color: rgba(66, 134, 244, 1);
@@ -277,6 +305,9 @@ body {
     padding: 15px;
     height: 15vh;
     width: 15vh;
+    font-size: 60px;
+    justify-content: center;
+
 }
 
 .game-square:nth-child(1),
@@ -306,6 +337,12 @@ body {
         font-size: 60px;
     }
 
+    #main-board {
+        width: 85vw;
+        height: 85vh;
+
+    }
+
 }
 
 @media screen and (max-width: 495px) {
@@ -319,6 +356,82 @@ body {
     #back-button {
         position: fixed;
         margin-top: -50px;
+    }
+
+}
+
+@media screen and (max-width: 535px) {
+    #back-button {
+        margin-top: -20px;
+        margin-left: 20px;
+
+    }
+
+    #game-name {
+        font-size: 40px;
+        margin-top: 30px;
+        
+    }
+
+    #score-board {
+        font-size: 15px;
+        padding: none !important;
+        
+    }
+
+    #rematch { 
+        font-size: 15px !important;
+        position: absolute;
+        bottom: -100px;
+    }
+
+    #mobile {
+        padding: 0px !important;
+    }
+
+    #level-select {
+        width: 88vw;  
+    }
+
+    #main-board {
+        width: 94vw;
+        height: 85vh;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .noughts-win, .crosses-win  {
+        font-size: 35px !important;
+        text-align: center !important; 
+    }
+    
+    #main-board:before {
+        width: 94vw;
+        height: 85vh;
+        transform: rotate(-1.5deg);
+        padding-left: 4px;
+        padding-right: 4px;
+        margin: 7.5vh 3vw;
+    
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    #level-select {
+        display: flex;
+        flex-direction: column;   
+    }
+
+    #level:nth-child(2), 
+    #level:nth-child(3) {
+        margin-left: 6px !important;
+
+    }
+
+    #play {
+        top: 80px;
     }
 
 }

@@ -67,20 +67,20 @@
                 </form>    
             </div>
             <div id="game-board" class="container d-none">
-                <div id="score-board" class="row justify-content-center">
-                    <div class="col">
+                <div id="score-board" class="row no-gutter justify-content-center">
+                    <div class="col" id="mobile">
                         <div id="player-one-div">
                             <div id="player-one-name">PLAYER &nbsp; 1</div>
                             <div id="player-one-score">0</div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col" id="mobile">
                         <div id="tie-div">
                             <div>TIES</div>
                             <div id="tie-count">0</div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col" id="mobile">
                         <div id="other-player-div">
                             <div id="other-player-name">PLAYER &nbsp; 2</div>
                             <div id="other-player-score">0</div>
@@ -102,6 +102,9 @@
                     <div class="col col-md-2 col-lg-2 col-xl-2 game-square" data-position="6"></div>
                     <div class="col col-md-2 col-lg-2 col-xl-2 game-square" data-position="7"></div>
                     <div class="col col-md-2 col-lg-2 col-xl-2 game-square" data-position="8"></div>
+                </div>
+                <div class="row justify-content-center">
+                    <button type="button" class="btn btn-outline-primary waves-effect animated hidden" id="rematch">REMATCH?</button>
                 </div>
             </div>
         </div>
