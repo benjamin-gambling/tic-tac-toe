@@ -22,7 +22,7 @@ To see the full list of the project outlines along with other submission visit t
 
 
 >**Game page**
-# ![Tic Tac Toe Game](readme_img/screenshot1.png)
+# ![Tic Tac Toe Game](readme_img/screenshot2.png)
 
 ## Table of contents
 
